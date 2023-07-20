@@ -1,4 +1,3 @@
-## function that uses the monte carlo method to estimate pi
 import random
 
 def estimate_pi(n):
