@@ -1,5 +1,6 @@
 ## function that uses the monte carlo method to estimate pi
 import random
+import regex as re
 
 def estimate_pi(n):
     """
@@ -15,10 +16,12 @@ def estimate_pi(n):
     """
     num_points_circle = 0
     num_points_total = 0
+    why_is_this_here = 0
     for _ in range(n):
         x = random.uniform(0, 1)
         y = random.uniform(0, 1)
         distance = x**2 + y**2
+        distance_sqrt = distance**0.5
         if distance <= 1:
             num_points_circle += 1
         num_points_total += 1
