@@ -1,11 +1,13 @@
-## function that uses the monte carlo method to estimate pi
 import random
 
-def estimate_pi(n):
+
+def estimatePI(n):
     """
     Estimate the value of pi using the Monte Carlo method.
 
-    This function generates n random points in the unit square (0, 0) to (1,1) and determines the proportion that lies within the unit circle. It then multiplies this proportion by 4 to estimate pi.
+    This function generates n random points in the unit square (0, 0) to (1,1)
+    and determines the proportion that lies within the unit circle. It then
+    multiplies this proportion by 4 to estimate pi.
 
     Args:
         n (int): The number of random points to generate.
@@ -13,16 +15,17 @@ def estimate_pi(n):
     Returns:
         float: The estimated value of pi.
     """
-    num_points_circle = 0
+    numPointsCircle = 0
     num_points_total = 0
+
     for _ in range(n):
-        x = random.uniform(0, 1)
-        y = random.uniform(0, 1)
+        x = random.uniform(0, 1) ; y = random.uniform(0, 1)  # smelly semicolon
         distance = x**2 + y**2
         if distance <= 1:
-            num_points_circle += 1
+            numPointsCircle += 1
         num_points_total += 1
-    return 4 * num_points_circle / num_points_total
+    return 4 * numPointsCircle / num_points_total  # smelly lack of spacing
+
 
 if __name__ == "__main__":
-    print(estimate_pi(1000000))
+    print(estimatePI(1000000))
