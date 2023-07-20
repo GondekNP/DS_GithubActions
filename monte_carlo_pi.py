@@ -6,8 +6,6 @@ def random_point():
     """Generate a random point in the unit square (0,0) to (1,1)."""
     x = random.uniform(0, 1)
     y = random.uniform(0, 1)
-    # intentionally break the function to see the test fail
-    x = None
     return x, y
 
 
