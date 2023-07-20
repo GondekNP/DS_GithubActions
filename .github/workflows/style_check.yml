@@ -1,4 +1,4 @@
-name: Python code quality 
+name: Python Style Checks
 
 on: [push, pull_request]
 
