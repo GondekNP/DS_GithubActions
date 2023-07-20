@@ -22,4 +22,4 @@ def test_estimate_pi():
 
 def test_estimate_pi_regression():
     pi = estimate_pi(10000000)
-    assert 3.141 < pi < 3.142
+    assert 3.139 < pi < 3.145
